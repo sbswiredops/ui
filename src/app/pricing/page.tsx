@@ -1,95 +1,168 @@
 export default function Pricing() {
+  // Updated features to match the reference UI copy/order and yearly pricing
   const features = [
-    { name: "Number of Albums/EPs", basic: "5", premium: "50", advanced: "Unlimited" },
-    { name: "Annual Prep", basic: "No", premium: "No", advanced: "No" },
-    { name: "Exclusive Stores (What Streamify offers)", basic: "60%", premium: "70%", advanced: "85%" },
-    { name: "Unlimited Upload", basic: "No", premium: "No", advanced: "Yes" },
-    { name: "24/7 by phone & TDD option", basic: true, premium: true, advanced: true },
-    { name: "Free Sell a UPC Codes", basic: true, premium: true, advanced: true },
-    { name: "Smartly by Brace", basic: true, premium: true, advanced: true },
-    { name: "Spotify for Artists Verification", basic: true, premium: true, advanced: true },
-    { name: "Apple Music for Artists Verification", basic: true, premium: true, advanced: true },
-    { name: "YouTube Content & Claim View", basic: false, premium: true, advanced: true },
-    { name: "Cover Song Licensing Support", basic: false, premium: true, advanced: true },
-    { name: "UPC/ISRC Distribution", basic: false, premium: false, advanced: true },
-    { name: "Dedicated Record Label Views", basic: false, premium: false, advanced: true },
-    { name: "Dedicated Support", basic: false, premium: false, advanced: true }
+    { name: "Number of Artists", basic: "1", advanced: "3", premium: "5" },
+    { name: "Annual Price", basic: "$6", advanced: "$18", premium: "$30" },
+    {
+      name: "Revenue Share (What Streamify keeps)",
+      basic: "10%",
+      advanced: "10%",
+      premium: "5%",
+    },
+    { name: "Unlimited Uploads", basic: true, advanced: true, premium: true },
+    {
+      name: "Distribution to 150+ Stores",
+      basic: true,
+      advanced: true,
+      premium: true,
+    },
+    {
+      name: "Free ISRC & UPC Codes",
+      basic: true,
+      advanced: true,
+      premium: true,
+    },
+    {
+      name: "Monthly Reports & Payouts",
+      basic: true,
+      advanced: true,
+      premium: true,
+    },
+    {
+      name: "Spotify for Artists Verification",
+      basic: true,
+      advanced: true,
+      premium: true,
+    },
+    {
+      name: "Apple Music for Artists Verification",
+      basic: true,
+      advanced: true,
+      premium: true,
+    },
+    {
+      name: "YouTube Official Artist Channel (OAC)",
+      basic: false,
+      advanced: false,
+      premium: false,
+    },
+    {
+      name: "Cover Song Licensing Support",
+      basic: false,
+      advanced: false,
+      premium: false,
+    },
+    {
+      name: "VEVO Video Distribution",
+      basic: false,
+      advanced: false,
+      premium: false,
+    },
+    {
+      name: "Custom Record Label Name",
+      basic: false,
+      advanced: false,
+      premium: true,
+    },
+    { name: "Dedicated Support", basic: false, advanced: false, premium: true },
   ];
 
   return (
-    <div className="bg-gray-900 text-white min-h-screen py-12 px-6">
-      {/* Header Section */}
-      <div className="max-w-4xl mx-auto text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Simple, Transparent Pricing
-          <br />
-          <span className="text-gray-400">- No Hidden Fees</span>
-        </h1>
-        <p className="text-gray-300 text-lg">
-          Choose the perfect plan for your music career and reach millions of listeners worldwide.
-        </p>
-      </div>
+    <div className="bg-gray-900 text-white min-h-screen">
+      {/* Hero Header */}
+      <section className="hero-gradient px-6 pt-12 pb-16">
+        <div className="max-w-5xl mx-auto text-left">
+          <h1 className="text-3xl md:text-5xl font-extrabold leading-tight">
+            <span className="underline decoration-white/90 decoration-4 underline-offset-4">
+              Simple, Transparent Pricing
+            </span>
+            <br />
+            <span className="text-white/90">- No Hidden Fees.</span>
+          </h1>
+          <p className="mt-4 text-gray-100/90 md:text-lg max-w-3xl">
+            Choose the perfect plan for your music career. All plans are billed
+            annually.
+          </p>
+        </div>
+      </section>
 
       {/* Pricing Cards */}
-      <div className="max-w-6xl mx-auto mb-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <div className="max-w-6xl mx-auto px-6 -mt-10 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {/* Basic Plan */}
-          <div className="bg-purple-600 p-8 rounded-2xl text-center">
-            <h3 className="text-xl font-semibold mb-2">BASIC</h3>
-            <div className="text-4xl font-bold mb-6">
+          <div className="bg-gradient-to-br from-[#5b21b6] to-[#7c3aed] p-6 md:p-8 rounded-2xl text-white shadow-lg border border-white/10">
+            <h3 className="text-sm tracking-widest font-semibold opacity-90">
+              BASIC
+            </h3>
+            <div className="mt-2 text-4xl font-extrabold">
               $6.00
-              <span className="text-lg font-normal">/mo</span>
+              <span className="text-lg font-normal align-super">/year</span>
             </div>
-            <button className="w-full bg-white text-purple-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+            <p className="mt-2 text-white/80">1 Artist, Unlimited Releases</p>
+            <button className="mt-6 w-full bg-white text-purple-700 font-semibold py-3 px-6 rounded-xl hover:bg-gray-100 transition-colors">
               GET STARTED
             </button>
           </div>
 
-          {/* Premium Plan - Highlighted */}
-          <div className="bg-gradient-to-br from-yellow-500 to-orange-500 p-8 rounded-2xl text-center relative">
-            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-orange-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-              FEATURED
+          {/* Advance (Middle – highlighted) */}
+          <div className="relative bg-gradient-to-br from-[#f59e0b] to-[#f97316] p-6 md:p-8 rounded-2xl text-white shadow-lg border border-white/10">
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-orange-600 text-white px-4 py-1 rounded-full text-xs font-semibold tracking-wider">
+              MIDDLE TIER
             </div>
-            <h3 className="text-xl font-semibold mb-2 text-white">PREMIUM</h3>
-            <div className="text-4xl font-bold mb-6 text-white">
+            <h3 className="text-sm tracking-widest font-semibold opacity-90">
+              ADVANCE
+            </h3>
+            <div className="mt-2 text-4xl font-extrabold">
               $18.00
-              <span className="text-lg font-normal">/mo</span>
+              <span className="text-lg font-normal align-super">/year</span>
             </div>
-            <button className="w-full bg-white text-orange-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+            <p className="mt-2 text-white/90">3 Artists, Unlimited Releases</p>
+            <button className="mt-6 w-full bg-white text-orange-700 font-semibold py-3 px-6 rounded-xl hover:bg-gray-100 transition-colors">
               GET STARTED
             </button>
           </div>
 
-          {/* Advanced Plan */}
-          <div className="bg-purple-600 p-8 rounded-2xl text-center">
-            <h3 className="text-xl font-semibold mb-2">ADVANCED</h3>
-            <div className="text-4xl font-bold mb-6">
+          {/* Premium Plan */}
+          <div className="bg-gradient-to-br from-[#5b21b6] to-[#7c3aed] p-6 md:p-8 rounded-2xl text-white shadow-lg border border-white/10">
+            <h3 className="text-sm tracking-widest font-semibold opacity-90">
+              PREMIUM
+            </h3>
+            <div className="mt-2 text-4xl font-extrabold">
               $30.00
-              <span className="text-lg font-normal">/mo</span>
+              <span className="text-lg font-normal align-super">/year</span>
             </div>
-            <button className="w-full bg-white text-purple-600 font-semibold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
+            <p className="mt-2 text-white/80">5 Artists, Unlimited Releases</p>
+            <button className="mt-6 w-full bg-white text-purple-700 font-semibold py-3 px-6 rounded-xl hover:bg-gray-100 transition-colors">
               GET STARTED
             </button>
           </div>
         </div>
 
         {/* Custom Plan */}
-        <div className="bg-gray-800 p-8 rounded-2xl flex flex-col md:flex-row items-center justify-between">
-          <div className="flex-1 mb-6 md:mb-0">
-            <h3 className="text-2xl font-bold mb-2">Custom Plan</h3>
-            <p className="text-gray-400">
-              Looking for a plan that fits your specific needs? Let's talk and build a 
-              plan that works just right for you. Get premium features with custom pricing 
-              based on your unique requirements. It's a personalized partnership that scales with you.
+        <div className="mt-8 bg-[#c7d8e8] text-gray-900 p-6 md:p-8 rounded-2xl flex flex-col md:flex-row items-center gap-6 md:gap-10 shadow-inner">
+          <div className="flex-1">
+            <h3 className="text-2xl font-extrabold mb-2">Custom Plan</h3>
+            <p className="text-gray-800/90">
+              Unlock your path to success with a premium, custom-tailored plan
+              designed to match the unique goals and demands of your artistry.
+              No limits, no caps—just a seamless flow to distribute and scale,
+              fully on your terms.
             </p>
-          </div>
-          <div className="flex items-center gap-4">
-            <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+            <button className="mt-4 bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 px-6 rounded-xl transition-colors">
               GET STARTED
             </button>
-            <div className="w-12 h-12 bg-gray-700 rounded-full flex items-center justify-center">
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
+          </div>
+          <div className="shrink-0 flex items-center gap-4">
+            <div className="w-12 h-12 rounded-full bg-white/60 backdrop-blur flex items-center justify-center text-purple-800 font-bold">
+              ♪
+            </div>
+            <div className="w-12 h-12 rounded-full bg-black/30 flex items-center justify-center">
+              <svg
+                className="w-6 h-6 text-white"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M8 5v14l11-7z" />
               </svg>
             </div>
           </div>
@@ -97,7 +170,7 @@ export default function Pricing() {
       </div>
 
       {/* Comparison Table */}
-      <div className="max-w-6xl mx-auto mb-16">
+      <div className="max-w-6xl mx-auto px-6 mb-16">
         <div className="bg-gray-800 rounded-2xl overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
@@ -106,28 +179,42 @@ export default function Pricing() {
                   <th className="text-left p-6 font-semibold">Features</th>
                   <th className="text-center p-6">
                     <div className="font-semibold">Basic Plan</div>
-                    <div className="text-gray-400 text-sm">$6.00/month</div>
+                    <div className="text-gray-400 text-sm">$6.00/year</div>
                   </th>
                   <th className="text-center p-6">
-                    <div className="font-semibold">Advanced Plan</div>
-                    <div className="text-gray-400 text-sm">$18.00/month</div>
+                    <div className="font-semibold">Advance Plan</div>
+                    <div className="text-gray-400 text-sm">$18.00/year</div>
                   </th>
                   <th className="text-center p-6">
                     <div className="font-semibold">Premium Plan</div>
-                    <div className="text-gray-400 text-sm">$30.00/month</div>
+                    <div className="text-gray-400 text-sm">$30.00/year</div>
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {features.map((feature, index) => (
-                  <tr key={index} className="border-b border-gray-700 last:border-b-0">
+                  <tr
+                    key={index}
+                    className="border-b border-gray-700 last:border-b-0"
+                  >
                     <td className="p-6 font-medium">{feature.name}</td>
+                    {/* Basic */}
                     <td className="p-6 text-center">
-                      {typeof feature.basic === 'boolean' ? (
+                      {typeof feature.basic === "boolean" ? (
                         feature.basic ? (
                           <div className="w-6 h-6 bg-green-500 rounded-full mx-auto flex items-center justify-center">
-                            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            <svg
+                              className="w-4 h-4 text-white"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M5 13l4 4L19 7"
+                              />
                             </svg>
                           </div>
                         ) : (
@@ -137,27 +224,23 @@ export default function Pricing() {
                         <span>{feature.basic}</span>
                       )}
                     </td>
+                    {/* Advance */}
                     <td className="p-6 text-center">
-                      {typeof feature.premium === 'boolean' ? (
-                        feature.premium ? (
-                          <div className="w-6 h-6 bg-green-500 rounded-full mx-auto flex items-center justify-center">
-                            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                          </div>
-                        ) : (
-                          <div className="text-gray-500">—</div>
-                        )
-                      ) : (
-                        <span>{feature.premium}</span>
-                      )}
-                    </td>
-                    <td className="p-6 text-center">
-                      {typeof feature.advanced === 'boolean' ? (
+                      {typeof feature.advanced === "boolean" ? (
                         feature.advanced ? (
                           <div className="w-6 h-6 bg-green-500 rounded-full mx-auto flex items-center justify-center">
-                            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                            <svg
+                              className="w-4 h-4 text-white"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M5 13l4 4L19 7"
+                              />
                             </svg>
                           </div>
                         ) : (
@@ -167,27 +250,53 @@ export default function Pricing() {
                         <span>{feature.advanced}</span>
                       )}
                     </td>
+                    {/* Premium */}
+                    <td className="p-6 text-center">
+                      {typeof feature.premium === "boolean" ? (
+                        feature.premium ? (
+                          <div className="w-6 h-6 bg-green-500 rounded-full mx-auto flex items-center justify-center">
+                            <svg
+                              className="w-4 h-4 text-white"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M5 13l4 4L19 7"
+                              />
+                            </svg>
+                          </div>
+                        ) : (
+                          <div className="text-gray-500">—</div>
+                        )
+                      ) : (
+                        <span>{feature.premium}</span>
+                      )}
+                    </td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          
+
           {/* Plan Action Buttons */}
-          <div className="p-6 bg-gray-750 border-t border-gray-700">
+          <div className="p-6 bg-gray-800 border-t border-gray-700">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="text-center">
-                <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+                <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-full transition-colors">
                   Purchase
                 </button>
               </div>
               <div className="text-center">
-                <button className="bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
-                  Start now
+                <button className="bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-2 px-6 rounded-full transition-colors">
+                  Purchase
                 </button>
               </div>
               <div className="text-center">
-                <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+                <button className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-6 rounded-full transition-colors">
                   Purchase
                 </button>
               </div>
@@ -197,9 +306,11 @@ export default function Pricing() {
       </div>
 
       {/* Newsletter Section */}
-      <section className="py-16 px-6 bg-gray-800 rounded-2xl max-w-6xl mx-auto">
+      <section className="py-16 px-6 bg-gray-800">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Subscribe to our newsletter for updates</h2>
+          <h2 className="text-3xl font-bold mb-4">
+            Subscribe to our newsletter for updates
+          </h2>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input
               type="email"
