@@ -29,9 +29,9 @@ export default function Header() {
         </nav>
 
         {/* Sign Up Button */}
-        <button className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full transition-colors">
+        <Link href="/signup" className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full transition-colors">
           Sign Up
-        </button>
+        </Link>
       </div>
     </header>
   );
