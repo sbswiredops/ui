@@ -31,3 +31,7 @@ body {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(75, 85, 99, 0.3);
 }
+
+.gold-gradient {
+  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+}

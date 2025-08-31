@@ -10,8 +10,8 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
               <li><Link href="/about" className="hover:text-white transition-colors">About Streamify</Link></li>
-              <li><Link href="/careers" className="hover:text-white transition-colors">Careers</Link></li>
-              <li><Link href="/press" className="hover:text-white transition-colors">Press</Link></li>
+              <li><Link href="/testimonials" className="hover:text-white transition-colors">Testimonials</Link></li>
+              <li><Link href="/student" className="hover:text-white transition-colors">Student Account</Link></li>
               <li><Link href="/blog" className="hover:text-white transition-colors">Blog</Link></li>
               <li><Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link></li>
             </ul>
@@ -34,6 +34,7 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/help" className="hover:text-white transition-colors">Help Center</Link></li>
               <li><Link href="/faq" className="hover:text-white transition-colors">FAQ</Link></li>
+              <li><Link href="/login" className="hover:text-white transition-colors">Login</Link></li>
               <li><Link href="/contact-support" className="hover:text-white transition-colors">Contact Support</Link></li>
             </ul>
           </div>
