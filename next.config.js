@@ -1,11 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    turbo: {
-      // Reduce HMR issues
-      resolveAlias: {
-        canvas: './empty-module.js',
-      },
+  turbopack: {
+    // Reduce HMR issues
+    resolveAlias: {
+      canvas: './empty-module.js',
     },
   },
   // Allow dev origins to prevent cross-origin warnings
