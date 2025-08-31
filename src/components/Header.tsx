@@ -5,12 +5,12 @@ export default function Header() {
     <header className="bg-gray-900 px-6 py-4">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center">
+        <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
           <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center mr-3">
             <span className="text-gray-900 font-bold text-lg">♪</span>
           </div>
           <span className="text-white font-bold text-xl">Streamify</span>
-        </div>
+        </Link>
 
         {/* Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
